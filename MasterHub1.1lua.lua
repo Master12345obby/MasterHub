@@ -37,7 +37,7 @@ MainSection:NewButton("Gear Glitches", "Gui with a bunch of glitches", function(
     loadstring(game:HttpGet('https://raw.githubusercontent.com/NotKendolaser/Admin-Gui/main/admingui%20thingy'))()
 end)
 
-PlayerSection:NewToggle("Headless (Client Side)", "Have no head", function(state)
+PlayerSection:NewToggle("Headless (Not Working)", "Have no head", function(state)
     if state then
         game.Workspace.Players.LocalPlayer.head.Transparency = 1
         game.Players.Players.LocalPlayer.head.face.Transparency = 1
