@@ -37,12 +37,20 @@ MainSection:NewButton("Gear Glitches", "Gui with a bunch of glitches", function(
     loadstring(game:HttpGet('https://raw.githubusercontent.com/NotKendolaser/Admin-Gui/main/admingui%20thingy'))()
 end)
 
-PlayerSection:NewToggle("Headless (Not Working)", "Have no head", function(state)
+PlayerSection:NewToggle("Headless (Client Side)", "Have no head", function(state)
     if state then
-        game.Workspace.Players.LocalPlayer.head.Transparency = 1
-        game.Players.Players.LocalPlayer.head.face.Transparency = 1
+        game.Players.LocalPlayer.Character.Head.Transparency = 1
+        game.Players.LocalPlayer.Character.Head.face.Transparency = 1
     else
-        game.Workspace.Players.LocalPlayer.head.Transparency = 0
-        game.Players.Players.LocalPlayer.head.face.Transparency = 0
+        game.Players.LocalPlayer.Character.Head.Transparency = 0
+        game.Players.LocalPlayer.Character.Head.face.Transparency = 0
+    end
+end)
+
+PlayerSection:NewToggle("Infinite Jump", "Removes jump cooldown", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/fuN6V79Q"))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/bLgftDvA"))()
     end
 end)
